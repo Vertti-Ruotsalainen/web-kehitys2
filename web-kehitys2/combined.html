@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+        #home { background: lightblue; }
+        #about { background: lightcoral; }
+        #services { background: lightgreen; }
+        #contact { background: lightsalmon; }
+        .scroll-to {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="scroll-to">Etusivu</a>
+            <a href="#about" class="scroll-to">Tietoa</a>
+            <a href="#services" class="scroll-to">Palvelut</a>
+            <a href="#contact" class="scroll-to">Yhteystiedot</a>
+        </nav>
+    </header>
+
+    <section id="home"><h2>Etusivu</h2></section>
+    <section id="about"><h2>Tietoa</h2></section>
+    <section id="services"><h2>Palvelut</h2></section>
+    <section id="contact"><h2>Yhteystiedot</h2></section>
+
+    <script>
+        document.querySelectorAll('.scroll-to').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

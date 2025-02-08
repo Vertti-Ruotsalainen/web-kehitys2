@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover {
+    background: #555;
+}
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+#home { background: lightblue; }
+#about { background: lightcoral; }
+#services { background: lightgreen; }
+#contact { background: lightsalmon; }
+.scroll-to {
+    cursor: pointer;
+}
