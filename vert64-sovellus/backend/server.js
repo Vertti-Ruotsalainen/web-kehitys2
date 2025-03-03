@@ -1,11 +1,14 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Import cors
+
 
 const app = express();
 const PORT = 3000;
 
 // Middleware to parse JSON request bodies
+app.use(cors()); // Enable CORS
 app.use(bodyParser.json());
 app.use(express.static('public')); // Serve static files from the "public" directory
 
