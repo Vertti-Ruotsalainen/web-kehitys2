@@ -34,7 +34,9 @@ Käyttäjäpolut:
 ## 3. UI Prototypes
 
 Kotisivu: Hakukenttä säätilan hakemiselle ja suosikkikaupungit.
+
 Käyttäjäprofiili: Käyttäjäasetukset, tallennetut paikat.
+
 Kirjautumis- ja rekisteröintisivut: Sähköpostikirjautuminen + Google-kirjautuminen.
 
 ## 4. Information Architecture and Technical Design
